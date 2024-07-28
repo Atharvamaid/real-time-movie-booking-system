@@ -74,7 +74,7 @@ const getOutdoorEventsFailure = () => {
 
 export const getOutdoorEvents = () => dispatch => {
     dispatch(getOutdoorEventsRequest());
-    return axios.get("https://bookmyshow-clone-masai.herokuapp.com/outdoor")
+    return axios.get("http://localhost:8080/outdoor")
         .then(res => dispatch(getOutdoorEventsSuccess(res.data.data)))
         .catch(error => dispatch(getOutdoorEventsFailure(error)))
 }
@@ -99,7 +99,7 @@ const getLaughterEventsFailure = () => {
 
 export const getLaughterEvents = () => dispatch => {
     dispatch(getLaughterEventsRequest());
-    return axios.get("https://bookmyshow-clone-masai.herokuapp.com/laughter")
+    return axios.get("http://localhost:8080/laughter")
         .then(res => dispatch(getLaughterEventsSuccess(res.data.data)))
         .catch(error => dispatch(getLaughterEventsFailure(error)))
 }
@@ -124,7 +124,7 @@ const getPopularEventsFailure = () => {
 
 export const getPopularEvents = () => dispatch => {
     dispatch(getPopularEventsRequest());
-    return axios.get("https://bookmyshow-clone-masai.herokuapp.com/popular")
+    return axios.get("http://localhost:8080/popular")
         .then(res => dispatch(getPopularEventsSuccess(res.data.data)))
         .catch(error => dispatch(getPopularEventsFailure(error)))
 }
@@ -150,7 +150,7 @@ const getLatestEventsFailure = () => {
 
 export const getLatestEvents = () => dispatch => {
     dispatch(getLatestEventsRequest());
-    return axios.get("https://bookmyshow-clone-masai.herokuapp.com/outdoor")
+    return axios.get("http://localhost:8080/outdoor")
         .then(res => dispatch(getLatestEventsSuccess(res.data.data)))
         .catch(error => dispatch(getLatestEventsFailure(error)))
 }

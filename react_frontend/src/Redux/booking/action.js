@@ -28,7 +28,7 @@ const postBookingDetailsFailure = () => {
 }
 export const postBookingDetails = (payload) => dispatch => {
     dispatch(postBookingDetailsRequest());
-    return axios.post("https://bookmyshow-clone-masai.herokuapp.com/booking", payload)
+    return axios.post("http://localhost:8080//booking", payload)
         .then(res => {
             dispatch(postBookingDetailsSuccess(res.data));
             return {
@@ -60,7 +60,7 @@ const getBookingDetailsFailure = () => {
 }
 export const getBookingDetails = () => dispatch => {
     dispatch(getBookingDetailsRequest());
-    return axios.get("https://bookmyshow-clone-masai.herokuapp.com/booking")
+    return axios.get("http://localhost:8080//booking")
         .then(res => {
             dispatch(getBookingDetailsSuccess(res.data.data));
         })

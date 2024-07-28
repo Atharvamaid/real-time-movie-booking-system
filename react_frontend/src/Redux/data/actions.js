@@ -34,7 +34,7 @@ export const getMovies = (id) => (dispatch) => {
 
 export const putMovies = (id, param) => (dispatch) => {
   return axios
-    .patch(`https://bookmyshow-clone-masai.herokuapp.com/movies/${id}`, param)
+    .patch(`http://localhost:8080/movies/${id}`, param)
     .then((res) => {
       dispatch(getMovies(id));
     })
